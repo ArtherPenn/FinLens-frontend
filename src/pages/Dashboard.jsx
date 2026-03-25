@@ -849,11 +849,17 @@ function ForecastTab() {
 // ─── AI Assistant tab ─────────────────────────────────────────────────────────
 function AIAssistantTab() {
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: 300 }}>
-      <Box sx={{ textAlign: 'center' }}>
-        <SmartToy sx={{ fontSize: 56, color: PALETTE.cyan, opacity: 0.4, mb: 2 }} />
-        <Typography sx={{ color: PALETTE.textPrimary, fontWeight: 700, fontSize: 18, mb: 1 }}>AI Assistant</Typography>
-        <Typography sx={{ color: PALETTE.textMuted, fontSize: 13 }}>Ask questions about your spending patterns</Typography>
+    <Box>
+      <Box sx={{ mb: 3 }}>
+        <Typography variant="h5" sx={{ color: PALETTE.textPrimary, fontWeight: 700 }}>
+          AI Finance Assistant
+        </Typography>
+        <Typography variant="caption" sx={{ color: PALETTE.textSecondary }}>
+          Ask questions about your spending patterns
+        </Typography>
+      </Box>
+      <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
+        <Chatbot />
       </Box>
     </Box>
   );
@@ -954,7 +960,7 @@ export default function Dashboard({ tokens, email, onLogout }) {
     { label: 'Expenses', icon: <Receipt sx={{ fontSize: 15 }} /> },
     { label: 'Analytics', icon: <BarChart sx={{ fontSize: 15 }} /> },
     { label: 'Forecast & ML', icon: <TrendingUp sx={{ fontSize: 15 }} /> },
-    { label: 'AI Assistant', icon: <Chatbot sx={{ fontSize: 15 }} /> },
+    { label: 'AI Assistant', icon: <SmartToy sx={{ fontSize: 15 }} /> },
     { label: 'Budgets', icon: <AccountBalanceWallet sx={{ fontSize: 15 }} /> },
   ];
 
